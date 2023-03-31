@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-30T01:35:42.815Z",
+    "end": "2023-03-30T01:36:16.597Z",
+    "duration": 33782,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "990a5c0b-f05a-4e1e-9250-3df00183f1e9",
+      "title": "",
+      "fullFile": "cypress/integration/alura-busca.spec.js",
+      "file": "cypress/integration/alura-busca.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3343f7ee-e896-425f-bc62-4eaa067cc41b",
+          "title": "alura busca cursos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "buscar curso de java",
+              "fullTitle": "alura busca cursos buscar curso de java",
+              "timedOut": null,
+              "duration": 31072,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#header-barraBusca-form-campoBusca').type('java');\ncy.get('.header-barraBusca-form-submit').click();\ncy.get('h4.busca-resultado-nome').should('contain', 'Formação Aprenda a programar em Java com Orientação a Objetos');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'match')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'match')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at https://www.alura.com.br/assets/js/courseIconFallback.1647533644.js:2:88",
+                "diff": null
+              },
+              "uuid": "701e9f5f-e243-4c86-9bab-0cbc7de8a877",
+              "parentUUID": "3343f7ee-e896-425f-bc62-4eaa067cc41b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "701e9f5f-e243-4c86-9bab-0cbc7de8a877"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 31072,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

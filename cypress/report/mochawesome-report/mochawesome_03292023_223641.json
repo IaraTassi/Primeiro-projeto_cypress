@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-30T01:36:27.485Z",
+    "end": "2023-03-30T01:36:41.977Z",
+    "duration": 14492,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8fe78438-7827-470d-9a6e-917e46737670",
+      "title": "",
+      "fullFile": "cypress/integration/alurapic.spec.js",
+      "file": "cypress/integration/alurapic.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8494bf7f-4bf1-4967-93ec-0c7450c90bca",
+          "title": "Login e registro de usarios alura pic",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifica mensagens de validação",
+              "fullTitle": "Login e registro de usarios alura pic verifica mensagens de validação",
+              "timedOut": null,
+              "duration": 7061,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Email is required!').should('be.visible');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Nome is required!').should('be.visible');\ncy.contains('ap-vmessage', 'Usuario name is required!').should('be.visible');\ncy.contains('ap-vmessage', 'Password is required!').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Nome is required!' within the selector: 'ap-vmessage' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Nome is required!' within the selector: 'ap-vmessage' but never did.\n    at Context.eval (https://alura-fotos.herokuapp.com/__cypress/tests?p=cypress\\integration\\alurapic.spec.js:108:53)",
+                "diff": null
+              },
+              "uuid": "60f9384d-e75e-4aa6-bf4d-e42b1e137436",
+              "parentUUID": "8494bf7f-4bf1-4967-93ec-0c7450c90bca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica mensagens de email invalido",
+              "fullTitle": "Login e registro de usarios alura pic verifica mensagens de email invalido",
+              "timedOut": null,
+              "duration": 2908,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.get('input[formcontrolname=\"email\"]').type('jacqueline');\ncy.contains('ap-vmessage', 'Invalid e-mail').should('be.visible');",
+              "err": {},
+              "uuid": "12c39e0b-09fb-4a60-9945-3618b8db4f7a",
+              "parentUUID": "8494bf7f-4bf1-4967-93ec-0c7450c90bca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifica mensagens de senha com menos de 8 caracteres ",
+              "fullTitle": "Login e registro de usarios alura pic verifica mensagens de senha com menos de 8 caracteres ",
+              "timedOut": null,
+              "duration": 1682,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.get('input[formcontrolname=\"password\"]').type('123');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');",
+              "err": {},
+              "uuid": "fa3d6a5e-c1fc-455f-8a14-151e2e8f7356",
+              "parentUUID": "8494bf7f-4bf1-4967-93ec-0c7450c90bca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "12c39e0b-09fb-4a60-9945-3618b8db4f7a",
+            "fa3d6a5e-c1fc-455f-8a14-151e2e8f7356"
+          ],
+          "failures": [
+            "60f9384d-e75e-4aa6-bf4d-e42b1e137436"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11651,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
